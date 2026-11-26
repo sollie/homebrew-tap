@@ -5,20 +5,20 @@
 class Sslcheck < Formula
   desc "Inspect TLS certificate chains and verify them against trust stores"
   homepage "https://github.com/sollie/sslcheck"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sollie/sslcheck/releases/download/v0.3.0/sslcheck_0.3.0_macos_amd64.tar.gz"
-      sha256 "27351e23f8a43a573fa99a68340efef6e4f083bad2f3ea8314ad33342a594b4b"
+      url "https://github.com/sollie/sslcheck/releases/download/v0.4.0/sslcheck_0.4.0_macos_amd64.tar.gz"
+      sha256 "6fd717f97a39429a0baa2173b307d8433ff7064cde3831c073371fa63d261ec3"
 
       define_method(:install) do
         bin.install "sslcheck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sollie/sslcheck/releases/download/v0.3.0/sslcheck_0.3.0_macos_arm64.tar.gz"
-      sha256 "ef091f2ba739e600332daf2c9e35880a671dc5855482d002f72307631504fc89"
+      url "https://github.com/sollie/sslcheck/releases/download/v0.4.0/sslcheck_0.4.0_macos_arm64.tar.gz"
+      sha256 "0c5280778c717caf3f89b8e035b15c1eb5b36cf52b76043d2c085d2e15c00a2a"
 
       define_method(:install) do
         bin.install "sslcheck"
@@ -28,22 +28,22 @@ class Sslcheck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sollie/sslcheck/releases/download/v0.3.0/sslcheck_0.3.0_linux_amd64.tar.gz"
-      sha256 "2d5acb373c23844dc52eb56f610e61a18a13cad3736f35bc1f5866758d4d5eab"
+      url "https://github.com/sollie/sslcheck/releases/download/v0.4.0/sslcheck_0.4.0_linux_amd64.tar.gz"
+      sha256 "c27f0a8495fe3583ae54c3278f686dbc83b2a230b8c0db525fc0799e2213ca72"
       define_method(:install) do
         bin.install "sslcheck"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sollie/sslcheck/releases/download/v0.3.0/sslcheck_0.3.0_linux_armv6.tar.gz"
-      sha256 "bbee042dad910f7a1823b63f4dda8c3b07aef261cc3d40aaac326acf1f8506cd"
+      url "https://github.com/sollie/sslcheck/releases/download/v0.4.0/sslcheck_0.4.0_linux_armv6.tar.gz"
+      sha256 "5c8867dfb06dc270079afe8be81360abecbcde0fc9fa1744fabc64eedcdd2ea7"
       define_method(:install) do
         bin.install "sslcheck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sollie/sslcheck/releases/download/v0.3.0/sslcheck_0.3.0_linux_arm64.tar.gz"
-      sha256 "93625dae6378a4b7ced256494a7d835512b349455571ea1237e26cb22556d70e"
+      url "https://github.com/sollie/sslcheck/releases/download/v0.4.0/sslcheck_0.4.0_linux_arm64.tar.gz"
+      sha256 "2c6304198bb85d5d0965fae7a975211dd536d4852f4f6c0f479ff7b1502cd6f8"
       define_method(:install) do
         bin.install "sslcheck"
       end
